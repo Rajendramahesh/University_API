@@ -1,0 +1,16 @@
+<!-- templates/add_student.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Student</title>
+</head>
+<body>
+    <h1>Add a New Student</h1>
+    <form method="POST" action="/add-student">
+        <label>Name:</label>
+        <input type="text" name="name" required>
+        <button type="submit">Add</button>
+    </form>
+    <a href="/students">Back to Students</a>
+</body>
+</html>

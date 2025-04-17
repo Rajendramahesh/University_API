@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>University Information System API Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 2rem;
+            background-color: #f5f7fa;
+        }
+        h1 {
+            color: #333;
+        }
+        .endpoint {
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+        }
+        .endpoint h3 {
+            margin-top: 0;
+            color: #007acc;
+        }
+        .endpoint p {
+            margin: 0.3rem 0;
+        }
+        a {
+            color: #007acc;
+            text-decoration: none;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>University Information System APIs</h1>
+        <p>
+            Welcome to the Student Information API. These APIs provide structured and paginated access to data 
+            related to <strong>departments</strong>, <strong>students</strong>, <strong>courses</strong>, and 
+            their associated entities such as <strong>instructors</strong>.
+        </p>
+        <p>
+            Each endpoint delivers clean JSON responses following a well-defined 
+            schema 
+        </p>
+
+    <div class="endpoint">
+        <h3>🔹 GET /students</h3>
+        <p><strong>Description:</strong> This API allows you to access paginated student information, including their enrolled courses and department details.</p>
+        <p><strong>Query Params:</strong> <code>page</code>, <code>page_size</code></p>
+        <p><strong>Example:</strong> <a href="/students?page=1&page_size=5">/students?page=1&page_size=5</a></p>
+    </div>
+
+
+    <div class="endpoint">
+        <h3>🔹 GET /departments</h3>
+        <p><strong>Description:</strong>This API allows you to access paginated department information, including their building and associated instructors details.</p>
+        <p><strong>Query Params:</strong> <code>page</code>, <code>page_size</code></p>
+        <p><strong>Example:</strong> <a href="/departments?page=1&page_size=5">/departments?page=1&page_size=5</a></p>
+    </div>
+
+    <div class="endpoint">
+        <h3>🔹 GET /courses</h3>
+        <p><strong>Description:</strong>This API allows you to access paginated course information, including their associated instructors details.</p>
+        <p><strong>Query Params:</strong> <code>page</code>, <code>page_size</code></p>
+        <p><strong>Example:</strong> <a href="/courses?page=1&page_size=5">/courses?page=1&page_size=5</a></p>
+    </div>
+    </div>
+</body>
+</html>

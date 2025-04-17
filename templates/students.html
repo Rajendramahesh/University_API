@@ -1,0 +1,33 @@
+<!-- templates/students.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Directory</title>
+</head>
+<body>
+    <h1>Student Directory</h1>
+
+    <form method="get" action="/students">
+        <input type="text" name="search" placeholder="Search..." value="{{ search }}">
+        <button type="submit">Search</button>
+    </form>
+
+    <h3>Page {{ page }} of {{ total_pages }}</h3>
+    <ul>
+        {% for student in students %}
+            <li>{{ student }}</li>
+        {% endfor %}
+    </ul>
+    <p><a href="/add-student">➕ Add New Student</a></p>
+
+    <div>
+        {% if page > 1 %}
+            <a href="/students?page={{ page - 1 }}&search={{ search }}">Previous</a>
+        {% endif %}
+
+        {% if page < total_pages %}
+            <a href="/students?page={{ page + 1 }}&search={{ search }}">Next</a>
+        {% endif %}
+    </div>
+</body>
+</html>
